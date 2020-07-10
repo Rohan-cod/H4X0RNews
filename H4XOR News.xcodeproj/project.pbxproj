@@ -13,6 +13,10 @@
 		7E4B534024B87CFE004264B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B533F24B87CFE004264B8 /* Assets.xcassets */; };
 		7E4B534324B87CFE004264B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B534224B87CFE004264B8 /* Preview Assets.xcassets */; };
 		7E4B534624B87CFE004264B8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E4B534424B87CFE004264B8 /* LaunchScreen.storyboard */; };
+		7EE4182C24B8807E00A18AEE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4182B24B8807E00A18AEE /* NetworkManager.swift */; };
+		7EE4182E24B882FF00A18AEE /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4182D24B882FF00A18AEE /* PostData.swift */; };
+		7EE4183124B888C300A18AEE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4183024B888C300A18AEE /* DetailView.swift */; };
+		7EE4183324B88D9900A18AEE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4183224B88D9900A18AEE /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		7E4B534224B87CFE004264B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7E4B534524B87CFE004264B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E4B534724B87CFE004264B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EE4182B24B8807E00A18AEE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7EE4182D24B882FF00A18AEE /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		7EE4183024B888C300A18AEE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		7EE4183224B88D9900A18AEE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		7EE4183424B88FA100A18AEE /* H4XOR News.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "H4XOR News.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		7E4B533824B87CFA004264B8 /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				7EE4183424B88FA100A18AEE /* H4XOR News.entitlements */,
 				7E4B533924B87CFA004264B8 /* AppDelegate.swift */,
 				7E4B533B24B87CFA004264B8 /* SceneDelegate.swift */,
-				7E4B533D24B87CFA004264B8 /* ContentView.swift */,
+				7EE4182F24B8889700A18AEE /* Views */,
+				7EE4182A24B8805E00A18AEE /* Models */,
 				7E4B533F24B87CFE004264B8 /* Assets.xcassets */,
 				7E4B534424B87CFE004264B8 /* LaunchScreen.storyboard */,
 				7E4B534724B87CFE004264B8 /* Info.plist */,
@@ -73,6 +84,25 @@
 				7E4B534224B87CFE004264B8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7EE4182A24B8805E00A18AEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7EE4182B24B8807E00A18AEE /* NetworkManager.swift */,
+				7EE4182D24B882FF00A18AEE /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7EE4182F24B8889700A18AEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7E4B533D24B87CFA004264B8 /* ContentView.swift */,
+				7EE4183024B888C300A18AEE /* DetailView.swift */,
+				7EE4183224B88D9900A18AEE /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE4182E24B882FF00A18AEE /* PostData.swift in Sources */,
+				7EE4183124B888C300A18AEE /* DetailView.swift in Sources */,
+				7EE4182C24B8807E00A18AEE /* NetworkManager.swift in Sources */,
 				7E4B533A24B87CFA004264B8 /* AppDelegate.swift in Sources */,
 				7E4B533C24B87CFA004264B8 /* SceneDelegate.swift in Sources */,
 				7E4B533E24B87CFA004264B8 /* ContentView.swift in Sources */,
+				7EE4183324B88D9900A18AEE /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,8 +318,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
+				DEVELOPMENT_TEAM = 7JU3NKZX5B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "H4XOR News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,6 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,8 +340,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "H4XOR News/H4XOR News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"H4XOR News/Preview Content\"";
+				DEVELOPMENT_TEAM = 7JU3NKZX5B;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "H4XOR News/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,6 +352,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.rocod.H4XOR-News";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
